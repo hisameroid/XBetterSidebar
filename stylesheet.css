@@ -1,0 +1,33 @@
+/* ==UserStyle==
+@name        XBetterSidebar
+@description Xのサイドバーから不要なボタンを削除します。英語版Xのみ動作します。 This style sheet makes X(formerly Twitter)'s sidebar better.
+@match https://twitter.com/*
+@match https://x.com/*
+ 
+==/UserStyle== */
+
+/*Delete two bottons (Xpremium , community)*/
+[class="css-1dbjc4n r-1habvwh r-eqz5dr r-uaa2di r-ymttw5 r-1f1sjgu" ][role="complementary"] {visibility: collapse;}
+[class="css-4rbku5 css-18t94o4 css-1dbjc4n r-1habvwh r-1loqt21 r-6koalj r-eqz5dr r-16y2uox r-1ny4l3l r-oyd9sg r-13qz1uu"][aria-label="Premium"]{visibility: collapse;}
+[class="css-4rbku5 css-18t94o4 css-1dbjc4n r-1habvwh r-1loqt21 r-6koalj r-eqz5dr r-16y2uox r-1ny4l3l r-oyd9sg r-13qz1uu"][aria-label="Communities"]{visibility: collapse;}
+
+/*move two bottons*/
+[class="css-4rbku5 css-18t94o4 css-1dbjc4n r-1habvwh r-1loqt21 r-6koalj r-eqz5dr r-16y2uox r-1ny4l3l r-oyd9sg r-13qz1uu"
+][aria-label="Profile"]{transform: translate(0px,-116.5px);}
+[class="css-18t94o4 css-1dbjc4n r-1habvwh r-6koalj r-eqz5dr r-16y2uox r-1ny4l3l r-oyd9sg r-13qz1uu"
+][aria-label="More menu items"]{transform: translate(0px,-116.5px);}
+
+/*hide x logo from the sidebar*/
+[aria-label="X"]{visibility:hidden;}
+
+/*show twitter logo on the sidebar*/
+[class="css-1dbjc4n r-dnmrzs r-1vvnge1"]{
+    background-image:url(https://pbs.twimg.com/media/F891WyoasAAKBrp?format=png&name=medium);
+    background-repeat:no-repeat;
+    background-size:contain;
+    width:29px;
+    height:29px;
+    margin-top:12px;
+    margin-bottom:12px;
+    margin-left:9px;
+}
